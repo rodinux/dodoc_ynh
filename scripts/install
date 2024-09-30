@@ -25,6 +25,13 @@ ynh_script_progression "Adding $app's configuration files..."
 ynh_config_add --template="settings.example.json" --destination="$install_dir/settings.json"
 
 #=================================================
+# Install chromium
+#=================================================
+ynh_script_progression "Setting up Chrome if asked."
+
+_install_or_upgrade_chrome
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
